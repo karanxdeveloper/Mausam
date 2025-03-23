@@ -17,7 +17,7 @@
 }
 
 .card{
-    width: 90%;
+    width: 80%;
     height: 70%;
     background-color: black;
     border-radius: 12px;
@@ -46,6 +46,7 @@
     border: none;
     width: 50%;
     border: 1px dashed white;
+    color: black;
 }
 
 .search-btn{
@@ -70,11 +71,13 @@
 
 .weather-icon{
     width: 12%;
+    transition: all 2s ease-out;
 }
 
 .details{
+    margin-top: 2rem;
     display: flex;
-    width: 50%;
+    width: 100%;
     justify-content: space-evenly;
 }
 
@@ -85,4 +88,37 @@
     align-items: center;
     font-weight: bold;
     font-size: large;
+}
+
+.windPng, .humidityPng{
+    animation: wind 1.2s  infinite ease-in-out;
+}
+
+@keyframes wind {
+    0%{
+        transform: translateY(2px);
+    }
+    50%{
+        transform: translateY(-2px);
+    }
+    100%{
+        transform: translateY(2px);
+    }
+}
+
+@media (max-width:1024px){
+    .card{
+        height: 80%;
+    }
+}
+@media (max-width:768px){
+    .card{
+        height: 50%;
+    }
+}
+
+@media (max-width:400px){
+    .card{
+        height: 70%;
+    }
 }
