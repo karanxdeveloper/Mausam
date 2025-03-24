@@ -6,6 +6,10 @@ const city = document.querySelector(".city");
 const humidity = document.querySelector(".humidity");
 const wind = document.querySelector(".wind");
 
+const theme = document.querySelector(".theme")
+const main = document.querySelector(".main")
+const card = document.querySelector(".card")
+
 const searchBox = document.querySelector(".search-box")
 const searchBtn = document.querySelector(".search-btn")
 
@@ -64,4 +68,27 @@ searchBtn.addEventListener("click",(e)=>{
 
 })
 
+let status = true;
+
+function handleTheme(){
+    if(status){
+        theme.innerHTML = `<i class="ri-moon-line"></i>`
+        card.style.backgroundColor = "#029e6f"
+        theme.style.backgroundColor = "#029e6f"
+        main.style.backgroundColor = "white"
+       
+        status = !status
+    }else{
+        theme.innerHTML = `<i class="ri-sun-line"></i>`
+        card.style.backgroundColor = "black"
+        theme.style.backgroundColor = "black"
+        main.style.backgroundColor = "#0b0f16"
+        status = !status
+    }
+     
+}
+
+theme.addEventListener("click",()=>{
+    handleTheme()
+})
 

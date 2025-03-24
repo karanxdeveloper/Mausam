@@ -4,12 +4,13 @@
     box-sizing: border-box;
     font-family: sans-serif;
     color: white;
+    transition: all 1s ease-out;
 }
 
 .main{
     width: 100vw;
     height: 100vh;
-    background-color: lightslategray;
+    background-color: #0b0f16;
     padding: 2px;
     display: flex;
     justify-content: center;
